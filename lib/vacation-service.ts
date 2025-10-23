@@ -9,7 +9,7 @@ import type {
   RejectVacationRequest,
 } from '@/types/vacation';
 
-const API_BASE_URL = 'http://127.0.0.1:8000/api';
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/api';
 const BASE_URL = '/vacations';
 
 const getHeaders = (includeAuth = true): Record<string, string> => {
